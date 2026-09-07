@@ -1,0 +1,211 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background: #07011d;
+}
+
+/* ================================
+   Users Table
+================================ */
+
+.user-card {
+    background: #161b22;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.user-card-header {
+    min-height: 75px;
+    padding: 18px 22px;
+    background: #161b22;
+    border-bottom: 1px solid #30363d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-card-header h5 {
+    color: #ffffff;
+}
+
+.user-count {
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #21262d;
+    color: #8b949e;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* Table */
+
+.user-table {
+    color: #c9d1d9;
+    background: #161b22;
+}
+
+.user-table thead {
+    background: #21262d;
+}
+
+.user-table thead th {
+    padding: 15px 20px;
+    border: 0;
+    color: #8b949e;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .7px;
+}
+
+.user-table tbody td {
+    padding: 17px 20px;
+    border-color: #30363d;
+    vertical-align: middle;
+}
+
+.user-table tbody tr {
+    transition: background-color .2s ease;
+}
+
+.user-table tbody tr:hover {
+    background-color: #1c2128;
+}
+
+
+/* ID */
+
+.user-id {
+    color: #8b949e;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* Name */
+
+.user-name {
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+
+/* Email */
+
+.user-email {
+    color: #8b949e;
+    font-size: 14px;
+}
+
+
+/* Role */
+
+.role-badge {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 20px;
+    background: #1f6feb;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+
+/* Action buttons */
+
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 7px;
+}
+
+.btn-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 58px;
+    padding: 6px 11px;
+
+    border-radius: 6px;
+    border: 1px solid transparent;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: all .2s ease;
+}
+
+
+/* Edit */
+
+.btn-edit {
+    background: #21262d;
+    border-color: #30363d;
+    color: #58a6ff;
+}
+
+.btn-edit:hover {
+    background: #30363d;
+    color: #79c0ff;
+}
+
+
+/* View */
+
+.btn-view {
+    background: #21262d;
+    border-color: #30363d;
+    color: #3fb950;
+}
+
+.btn-view:hover {
+    background: #30363d;
+    color: #56d364;
+}
+
+
+/* Delete */
+
+.btn-delete {
+    background: #21262d;
+    border-color: #30363d;
+    color: #f85149;
+}
+
+.btn-delete:hover {
+    background: #30363d;
+    color: #ff7b72;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .user-card-header {
+        padding: 16px;
+    }
+
+    .user-table thead th,
+    .user-table tbody td {
+        padding: 13px 14px;
+    }
+
+    .action-buttons {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+}
