@@ -4,14 +4,13 @@
 ======================================== */
 
 const menuBtn = document.getElementById("menuBtn");
-const sidebar = document.getElementById("sidebar");
+const sidebar = document.querySelector(".sidebar");
+const mainContent = document.querySelector(".main-content");
 
 menuBtn.addEventListener("click", function () {
-
     sidebar.classList.toggle("show");
-
+    mainContent.classList.toggle("sidebar-open");
 });
-
 
 
 /* ========================================

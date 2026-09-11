@@ -1,0 +1,201 @@
+/* ========================================
+   RESPONSIVE STYLES
+   Keep all responsive rules in this file.
+   ======================================== */
+
+@media (max-width: 991px) {
+
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .top-search {
+        width: 300px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .topbar {
+        padding: 0 15px;
+
+        gap: 10px;
+    }
+
+    .top-search {
+        flex: 1;
+
+        width: auto;
+    }
+
+    .topbar-right {
+        gap: 12px;
+    }
+
+    .profile-name {
+        display: none;
+    }
+
+    .page-content {
+        padding: 20px 15px;
+    }
+
+    .welcome-section {
+        display: block;
+    }
+
+    .welcome-title {
+        font-size: 24px;
+    }
+
+    .date-display {
+        margin-top: 15px;
+    }
+
+    .users-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .users-actions {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .table-search {
+        width: 100%;
+    }
+
+    .add-user-btn {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .table-footer {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .dashboard-footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .top-search {
+        display: none;
+    }
+
+    .welcome-title {
+        font-size: 21px;
+    }
+
+    .stat-card {
+        min-height: 105px;
+
+        padding: 18px;
+    }
+
+    .stat-icon {
+        width: 52px;
+        height: 52px;
+
+        font-size: 24px;
+    }
+
+    .stat-number {
+        font-size: 25px;
+    }
+
+    .stat-label {
+        font-size: 13px;
+    }
+
+    .users-title {
+        font-size: 19px;
+    }
+
+}
+
+/* ========================================
+   TABLE / SEARCH RESPONSIVENESS
+   ======================================== */
+
+@media (max-width: 991px) {
+    .users-header {
+        flex-wrap: wrap;
+    }
+
+    .users-actions {
+        width: 100%;
+    }
+
+    .table-search {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .table-search {
+        width: 100%;
+    }
+
+    .table-search form {
+        width: 100%;
+    }
+
+    .table-search input {
+        min-width: 0;
+        flex: 1;
+    }
+
+    .table-search button {
+        flex-shrink: 0;
+    }
+
+    .table-container {
+        padding: 0 10px;
+    }
+
+    .table-footer {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .table-search form {
+        gap: 8px;
+    }
+
+    .table-search button {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .user-table {
+        min-width: 820px;
+    }
+}

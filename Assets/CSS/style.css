@@ -7,7 +7,6 @@
 }
 
 
-
 body {
     min-height: 100vh;
     background: #080f18;
@@ -54,8 +53,13 @@ a {
 
     display: flex;
     flex-direction: column;
+    transform: translateX(-100%);
 
     transition: all 0.3s ease;
+}
+
+.sidebar.show {
+    transform: translateX(0);
 }
 
 
@@ -195,8 +199,8 @@ a {
 
 .main-content {
     margin-left: 272px;
-
     min-height: 100vh;
+    transition: margin-left 0.3s ease;
 
     background:
         radial-gradient(circle at 80% 10%,
@@ -1090,149 +1094,93 @@ a {
 }
 
 
+.table-search {
+    width: 350px;
+}
+
+.table-search form {
+    display: flex;
+    gap: 10px;
+}
+
+.table-search input {
+    height: 45px;
+    background: #111d2b;
+    color: #fff;
+    border: 1px solid #24364b;
+    border-radius: 8px;
+    padding: 0 15px;
+}
+
+.table-search input::placeholder {
+    color: #94a3b8;
+}
+
+.table-search input:focus {
+    background: #111d2b;
+    color: #fff;
+    border-color: #2196f3;
+    box-shadow: none;
+}
+
+.table-search button {
+    height: 45px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 8px;
+}
+
 /* ========================================
            MOBILE SIDEBAR
         ======================================== */
-
-@media (max-width: 991px) {
-
-    .sidebar {
-        transform: translateX(-100%);
-    }
-
-    .sidebar.show {
-        transform: translateX(0);
-    }
-
-    .main-content {
-        margin-left: 0;
-    }
-
-    .top-search {
-        width: 300px;
-    }
-
-}
 
 
 /* ========================================
            MOBILE
         ======================================== */
 
-@media (max-width: 767px) {
-
-    .topbar {
-        padding: 0 15px;
-
-        gap: 10px;
-    }
-
-    .top-search {
-        flex: 1;
-
-        width: auto;
-    }
-
-    .topbar-right {
-        gap: 12px;
-    }
-
-    .profile-name {
-        display: none;
-    }
-
-    .page-content {
-        padding: 20px 15px;
-    }
-
-    .welcome-section {
-        display: block;
-    }
-
-    .welcome-title {
-        font-size: 24px;
-    }
-
-    .date-display {
-        margin-top: 15px;
-    }
-
-    .users-header {
-        align-items: flex-start;
-
-        flex-direction: column;
-    }
-
-    .users-actions {
-        width: 100%;
-
-        flex-direction: column;
-    }
-
-    .table-search {
-        width: 100%;
-    }
-
-    .add-user-btn {
-        width: 100%;
-
-        justify-content: center;
-    }
-
-    .table-footer {
-        align-items: flex-start;
-
-        flex-direction: column;
-    }
-
-    .dashboard-footer {
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 10px;
-    }
-
-}
-
 
 /* ========================================
            SMALL MOBILE
         ======================================== */
 
-@media (max-width: 480px) {
+/* ========================================
+           FINAL POLISH / SAFETY
+        ======================================== */
 
-    .top-search {
-        display: none;
-    }
+html {
+    scroll-behavior: smooth;
+}
 
-    .welcome-title {
-        font-size: 21px;
-    }
+button,
+input {
+    font-family: inherit;
+}
 
-    .stat-card {
-        min-height: 105px;
+.table-search form {
+    width: 100%;
+}
 
-        padding: 18px;
-    }
+.table-search .form-control {
+    min-width: 0;
+}
 
-    .stat-icon {
-        width: 52px;
-        height: 52px;
+.table-search .btn {
+    flex-shrink: 0;
+}
 
-        font-size: 24px;
-    }
+.user-table {
+    min-width: 900px;
+}
 
-    .stat-number {
-        font-size: 25px;
-    }
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
 
-    .stat-label {
-        font-size: 13px;
-    }
-
-    .users-title {
-        font-size: 19px;
-    }
-
+.action-btn,
+.add-user-btn,
+.nav-link-custom,
+.page-link {
+    cursor: pointer;
 }
